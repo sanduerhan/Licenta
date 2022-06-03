@@ -1,94 +1,4 @@
-    - Count Vectorizer + Multinomial Naive Bayes:
-    Accuracy 0.5293594306049823
-                precision    recall  f1-score   support
-
-      moderate       0.56      0.79      0.66      2306
-not depression       0.68      0.22      0.33      1830
-        severe       0.24      0.44      0.31       360
-
-      accuracy                           0.53      4496
-     macro avg       0.49      0.48      0.43      4496
-  weighted avg       0.58      0.53      0.49      4496
-
--CountVectorizer + Bayes + SMOTE
-Accuracy 0.5209074733096085
-                precision    recall  f1-score   support
-
-      moderate       0.56      0.78      0.65      2306
-not depression       0.70      0.24      0.35      1830
-        severe       0.16      0.31      0.21       360
-
-      accuracy                           0.52      4496
-     macro avg       0.48      0.44      0.41      4496
-  weighted avg       0.59      0.52      0.50      4496
-  Accuracy 0.4822064056939502  RandomOverSampler + CountVectorizer
-                precision    recall  f1-score   support
-
-      moderate       0.58      0.62      0.60      2306
-not depression       0.63      0.30      0.41      1830
-        severe       0.16      0.53      0.25       360
-
-      accuracy                           0.48      4496
-     macro avg       0.46      0.48      0.42      4496
-  weighted avg       0.57      0.48      0.49      4496
-
-    - TfIdf + Multinomial NB :
-    Accuracy 0.5220195729537367
-                precision    recall  f1-score   support
-
-      moderate       0.52      1.00      0.68      2306
-not depression       0.87      0.02      0.04      1830
-        severe       0.73      0.02      0.04       360
-
-      accuracy                           0.52      4496
-     macro avg       0.70      0.35      0.26      4496
-  weighted avg       0.68      0.52      0.37      4496
-
-
--TFIDF + Bayes + SMOTE
- Accuracy 0.48398576512455516
-                precision    recall  f1-score   support
-
-      moderate       0.57      0.69      0.62      2306
-not depression       0.71      0.22      0.33      1830
-        severe       0.16      0.51      0.25       360
-
-      accuracy                           0.48      4496
-     macro avg       0.48      0.47      0.40      4496
-  weighted avg       0.59      0.48      0.48      4496
-
-
--Word2Vec + NN - SMOTE
-
-Epoch 1/5
-/usr/local/lib/python3.7/dist-packages/keras/optimizer_v2/rmsprop.py:130: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
-  super(RMSprop, self).__init__(name, **kwargs)
-112/112 [==============================] - 26s 229ms/step - loss: 0.9768 - accuracy: 0.6600 - val_loss: 1.4541 - val_accuracy: 0.5273
-Epoch 2/5
-112/112 [==============================] - 26s 229ms/step - loss: 0.8454 - accuracy: 0.6888 - val_loss: 0.7225 - val_accuracy: 0.6897
-Epoch 3/5
-112/112 [==============================] - 26s 229ms/step - loss: 0.7705 - accuracy: 0.7009 - val_loss: 0.6593 - val_accuracy: 0.7116
-Epoch 4/5
-112/112 [==============================] - 26s 229ms/step - loss: 0.6730 - accuracy: 0.7074 - val_loss: 0.6034 - val_accuracy: 0.7251
-Epoch 5/5
-112/112 [==============================] - 26s 229ms/step - loss: 0.6129 - accuracy: 0.7212 - val_loss: 0.5498 - val_accuracy: 0.7212
-<keras.callbacks.History at 0x7f4d60d8ea10>
-
--Adaboost + SMOTE + TFidf
-
-AdaBoost Classifier Model Accuracy: 0.5028914590747331
-                precision    recall  f1-score   support
-
-      moderate       0.59      0.43      0.50      2306
-not depression       0.54      0.61      0.57      1830
-        severe       0.22      0.45      0.29       360
-
-      accuracy                           0.50      4496
-     macro avg       0.45      0.50      0.45      4496
-  weighted avg       0.54      0.50      0.51      4496
-
-
- -Adaboost - SMOTE + TFIDF
+-Adaboost  + TFIDF
  AdaBoost Classifier Model Accuracy: 0.5729537366548043
                 precision    recall  f1-score   support
 
@@ -102,21 +12,7 @@ not depression       0.66      0.33      0.44      1830
 
 
 
-  With Smote + tf idf
- Regression Classifier Model Accuracy: 0.5326957295373665
-                precision    recall  f1-score   support
-
-      moderate       0.59      0.59      0.59      2306
-not depression       0.58      0.47      0.52      1830
-        severe       0.25      0.51      0.34       360
-
-      accuracy                           0.53      4496
-     macro avg       0.47      0.52      0.48      4496
-  weighted avg       0.56      0.53      0.54      4496
-
-
-
-  Without Smote + tfidf
+  tfidf+regresie
  Regression Classifier Model Accuracy: 0.5796263345195729
                 precision    recall  f1-score   support
 
@@ -127,3 +23,274 @@ not depression       0.66      0.28      0.40      1830
       accuracy                           0.58      4496
      macro avg       0.56      0.46      0.46      4496
   weighted avg       0.60      0.58      0.54      4496
+
+
+  TFIDF + SMOTE + BayesNaive
+  Accuracy 0.4786476868327402
+              precision    recall  f1-score   support
+
+           0       0.58      0.64      0.61      2306
+           1       0.66      0.26      0.38      1830
+           2       0.16      0.55      0.25       360
+
+    accuracy                           0.48      4496
+   macro avg       0.47      0.48      0.41      4496
+weighted avg       0.58      0.48      0.48      4496
+
+   TFIDF+SMOTE+Adaboost
+AdaBoost Classifier Model Accuracy: 0.5046708185053381
+              precision    recall  f1-score   support
+
+           0       0.60      0.43      0.50      2306
+           1       0.55      0.61      0.58      1830
+           2       0.20      0.46      0.28       360
+
+    accuracy                           0.50      4496
+   macro avg       0.45      0.50      0.45      4496
+weighted avg       0.55      0.50      0.51      4496
+
+
+CV+Smote+Bayes
+Accuracy 0.5338078291814946
+              precision    recall  f1-score   support
+
+           0       0.57      0.82      0.67      2306
+           1       0.71      0.23      0.35      1830
+           2       0.15      0.24      0.19       360
+
+    accuracy                           0.53      4496
+   macro avg       0.48      0.43      0.40      4496
+weighted avg       0.59      0.53      0.50      4496
+
+tfidf classweights regresie
+Regression Classifier Model Accuracy: 0.5107896027464444
+              precision    recall  f1-score   support
+
+           0       0.59      0.63      0.61      2198
+           1       0.46      0.33      0.39      1522
+           2       0.31      0.54      0.39       358
+
+    accuracy                           0.51      4078
+   macro avg       0.45      0.50      0.46      4078
+weighted avg       0.52      0.51      0.51      4078
+
+
+TfiDF SMote regresie
+Regression Classifier Model Accuracy: 0.5441392839627268
+              precision    recall  f1-score   support
+
+           0       0.63      0.61      0.62      2198
+           1       0.54      0.44      0.48      1522
+           2       0.30      0.60      0.40       358
+
+    accuracy                           0.54      4078
+   macro avg       0.49      0.55      0.50      4078
+weighted avg       0.57      0.54      0.55      4078
+
+[[1333  536  329]
+ [ 680  670  172]
+ [  99   43  216]]
+
+cv svm smote
+Svc Classifier Model Accuracy: 0.34624816086316823
+              precision    recall  f1-score   support
+
+           0       0.63      0.26      0.37      2198
+           1       0.48      0.39      0.43      1522
+           2       0.13      0.70      0.22       358
+
+    accuracy                           0.35      4078
+   macro avg       0.41      0.45      0.34      4078
+weighted avg       0.53      0.35      0.38      4078
+
+
+cv regresie smote
+Regression Classifier Model Accuracy: 0.3766552231486023
+              precision    recall  f1-score   support
+
+           0       0.63      0.34      0.45      2198
+           1       0.49      0.36      0.42      1522
+           2       0.13      0.65      0.22       358
+
+    accuracy                           0.38      4078
+   macro avg       0.42      0.45      0.36      4078
+weighted avg       0.54      0.38      0.41      4078
+
+tfidf svm classweights
+ Svc Classifier Model Accuracy: 0.5031878371750859
+              precision    recall  f1-score   support
+
+           0       0.58      0.62      0.60      2198
+           1       0.44      0.34      0.38      1522
+           2       0.30      0.47      0.36       358
+
+    accuracy                           0.50      4078
+   macro avg       0.44      0.48      0.45      4078
+weighted avg       0.51      0.50      0.50      4078
+
+
+tfidf svm smote
+Svc Classifier Model Accuracy: 0.513241785188818
+              precision    recall  f1-score   support
+
+           0       0.61      0.55      0.58      2198
+           1       0.48      0.46      0.47      1522
+           2       0.28      0.48      0.35       358
+
+    accuracy                           0.51      4078
+   macro avg       0.46      0.50      0.47      4078
+weighted avg       0.53      0.51      0.52      4078
+
+-------------------------------------------------------------
+
+SentenceTransformer("roberta-large-nli-stsb-mean-tokens")
+Accuracy: 0.5736
+              precision    recall  f1-score   support
+
+           0     0.6038    0.7584    0.6723      2198
+           1     0.5643    0.3574    0.4377      1522
+           2     0.3626    0.3575    0.3601       358
+
+    accuracy                         0.5736      4078
+   macro avg     0.5102    0.4911    0.4900      4078
+weighted avg     0.5679    0.5736    0.5573      4078
+
+SentenceTransformer("all-mpnet-base-v2")
+Accuracy: 0.5552
+              precision    recall  f1-score   support
+
+           0     0.6087    0.6852    0.6447      2198
+           1     0.5621    0.3837    0.4561      1522
+           2     0.3080    0.4860    0.3770       358
+
+    accuracy                         0.5552      4078
+   macro avg     0.4929    0.5183    0.4926      4078
+weighted avg     0.5649    0.5552    0.5508      4078
+
+
+
+Word2Vec + Neural Network
+              precision    recall  f1-score   support
+
+           0     0.5992    0.7680    0.6732      2198
+           1     0.5561    0.3160    0.4030      1522
+           2     0.3813    0.4218    0.4005       358
+
+    accuracy                         0.5689      4078
+   macro avg     0.5122    0.5019    0.4922      4078
+weighted avg     0.5640    0.5689    0.5484      4078
+
+              precision    recall  f1-score   support
+
+           0     0.5886    0.8690    0.7018      2198
+           1     0.6010    0.2464    0.3495      1522
+           2     0.4976    0.2905    0.3668       358
+
+    accuracy                         0.5858      4078
+   macro avg     0.5624    0.4686    0.4727      4078
+weighted avg     0.5852    0.5858    0.5409      4078
+
+
+
+
+Smote TfIdf Regresie
+Regression Classifier Model Accuracy: 0.5235409514467877
+              precision    recall  f1-score   support
+
+           0     0.6049    0.6151    0.6100      2198
+           1     0.4996    0.3811    0.4324      1522
+           2     0.2977    0.5670    0.3904       358
+
+    accuracy                         0.5235      4078
+   macro avg     0.4674    0.5211    0.4776      4078
+weighted avg     0.5386    0.5235    0.5244      4078
+
+ClassWeights TfIdf Regresie
+Regression Classifier Model Accuracy: 0.5223148602256008
+              precision    recall  f1-score   support
+
+           0     0.5865    0.6601    0.6211      2198
+           1     0.4729    0.3265    0.3863      1522
+           2     0.3291    0.5084    0.3996       358
+
+    accuracy                         0.5223      4078
+   macro avg     0.4628    0.4984    0.4690      4078
+weighted avg     0.5215    0.5223    0.5141      4078
+
+TfIdf Regresie NotBalanced
+Regression Classifier Model Accuracy: 0.5502697400686611
+              precision    recall  f1-score   support
+
+           0     0.5553    0.9318    0.6959      2198
+           1     0.5045    0.0742    0.1294      1522
+           2     0.5000    0.2318    0.3168       358
+
+    accuracy                         0.5503      4078
+   macro avg     0.5199    0.4126    0.3807      4078
+weighted avg     0.5315    0.5503    0.4512      4078
+
+CountVec Regresie Smote
+Regression Classifier Model Accuracy: 0.49730259931338894
+              precision    recall  f1-score   support
+
+           0     0.6254    0.5796    0.6017      2198
+           1     0.5030    0.3830    0.4349      1522
+           2     0.1939    0.4777    0.2758       358
+
+    accuracy                         0.4973      4078
+   macro avg     0.4408    0.4801    0.4375      4078
+weighted avg     0.5419    0.4973    0.5108      4078
+
+
+
+
+
+
+TfIdf Smote SVM
+Svc Classifier Model Accuracy: 0.5232957332025503
+              precision    recall  f1-score   support
+
+           0     0.6152    0.5805    0.5974      2198
+           1     0.4863    0.4428    0.4635      1522
+           2     0.2977    0.5140    0.3770       358
+
+    accuracy                         0.5233      4078
+   macro avg     0.4664    0.5124    0.4793      4078
+weighted avg     0.5392    0.5233    0.5281      4078
+
+TfIdf ClassWeights SVM
+Svc Classifier Model Accuracy: 0.5213339872486513
+              precision    recall  f1-score   support
+
+           0     0.5868    0.6688    0.6251      2198
+           1     0.4621    0.3167    0.3758      1522
+           2     0.3283    0.4860    0.3919       358
+
+    accuracy                         0.5213      4078
+   macro avg     0.4591    0.4905    0.4643      4078
+weighted avg     0.5176    0.5213    0.5116      4078
+
+
+CountVec Smote SVM
+Svc Classifier Model Accuracy: 0.4757233938205002
+              precision    recall  f1-score   support
+
+           0     0.6177    0.5359    0.5739      2198
+           1     0.4770    0.3883    0.4281      1522
+           2     0.1835    0.4777    0.2651       358
+
+    accuracy                         0.4757      4078
+   macro avg     0.4261    0.4673    0.4224      4078
+weighted avg     0.5271    0.4757    0.4924      4078
+
+TfIDf Smote BayesNaiv
+Accuracy 0.32540461010299165
+              precision    recall  f1-score   support
+
+           0     0.5638    0.3076    0.3980      2198
+           1     0.5197    0.2346    0.3232      1522
+           2     0.1341    0.8212    0.2306       358
+
+    accuracy                         0.3254      4078
+   macro avg     0.4059    0.4544    0.3173      4078
+weighted avg     0.5096    0.3254    0.3554      4078
